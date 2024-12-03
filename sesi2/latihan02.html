@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JQuery 02</title>
+</head>
+<body>
+    <input type="text" id="txNAMA">
+    <button id="cmdNAMA">get NAMA</button>
+
+    <p class="viewNAMA">--NAMA--</p>
+
+    <script src="../bootstrap-5.3.3/jquery/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#cmdNAMA").on("click",function(){
+                let nama=$("#txNAMA").val()
+              $(".viewNAMA").html(nama)
+            })
+        })
+    </script>
+    
+</body>
+</html>

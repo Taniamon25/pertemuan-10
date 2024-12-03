@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JQuery 03</title>
+</head>
+<body>
+     <h3>Hitung Luas Persegi</h3>
+    
+     <div>
+        panjang<input type="text" id="txPANJANG">
+     </div>
+     <div>
+        Lebar<input type="text" id="txLEBAR">
+     </div>
+     <div>
+        <P class="txHASIL">hasil</P>
+    </div>
+    <div>
+        <button id="cmdHITUNG">Hitung Luas</button>
+    </div>
+    <script src="../bootstrap-5.3.3/jquery/jquery-3.7.1.min.js">
+    </script>
+    <script>
+        $(function(){
+            $("#cmdHITUNG").on("click",function(){
+                let pj = $("#txPANJANG").VAL()
+                let lb = $("#txLEBAR").VAL()
+                let luas = pj*lb
+                let info = "Hitung Luas Persegi<br>Panjang:"+pj+"<br>lebar: "+lb+"<br>"
+                info +="Luas = Panjang x Lebar<br>Luas = "+pj+ " x "+ lb +"<br>"
+                info +="Luas = " + luas
+                $(".txHASIL").html(info)
+            })
+        })
+    </script>
+    
+</body>
+</html>
